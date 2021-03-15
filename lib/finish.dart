@@ -11,12 +11,10 @@ class Finish extends StatelessWidget {
       ),
       body: Center(
           child: RaisedButton(
-        child: Text('ホームへ'),
+        child: Text('カメラへ'),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MyHomePage()),
-          );
+          //Navigator.popUntil(context, ModalRoute.withName('/'));
+          Navigator.pushNamed(context, '/camera');
         },
       )),
     );

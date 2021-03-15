@@ -12,10 +12,7 @@ class Next extends StatelessWidget {
           child: RaisedButton(
         child: Text('次へ'),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Finish()),
-          );
+          Navigator.pushNamed(context, '/finish');
         },
       )),
     );

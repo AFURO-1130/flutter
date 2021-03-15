@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/finish.dart';
 import 'package:flutter_application_1/next.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => MyHomePage(),
+        '/next': (context) => Next(),
+        '/finish': (context) => Finish(),
+        '/camera': (context) => TakePictureScreen(),
+        
+      },
     );
   }
 }
